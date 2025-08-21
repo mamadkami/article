@@ -1,0 +1,19 @@
+# Node modules
+Frontend/node_modules/
+Backend/node_modules/
+
+# Build output (React / Vite)
+Frontend/dist/
+Frontend/build/
+
+# Logs
+Frontend/npm-debug.log*
+Backend/npm-debug.log*
+
+# Env files
+Frontend/.env
+Backend/.env
+
+# OS files
+.DS_Store
+Thumbs.db
