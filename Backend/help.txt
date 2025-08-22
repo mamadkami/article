@@ -3,3 +3,6 @@ npx knex migrate:latest
 
 اجرای Seed
 npx knex seed:run
+
+
+...
