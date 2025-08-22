@@ -1,13 +1,14 @@
 import React from 'react';
 import { Menu, X, Camera } from 'lucide-react';
 import { HeaderProps } from '../types/interface';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../app/store';
-import {
-  toggleMenu,
+import { toggleMenu } from "../../features/home/homeSlice";
 
-} from "../../features/home/homeSlice";
 export const Header: React.FC<HeaderProps> = () => {
+  const dispatch = useDispatch();
+  const { isMenuOpen } = useSelector((state: RootState) => state.home);
+
   // لیست آیتم‌ها با متن فارسی و id انگلیسی
   const menuItems = [
     { label: 'صفحه اصلی', id: 'home' },
@@ -16,9 +17,6 @@ export const Header: React.FC<HeaderProps> = () => {
     { label: 'درباره من', id: 'about' },
     { label: 'تماس', id: 'contact' },
   ];
-
-  const { isMenuOpen } =
-  useSelector((state: RootState) => state.home);
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-lg z-50 shadow-md transition-all duration-300">
@@ -54,7 +52,7 @@ export const Header: React.FC<HeaderProps> = () => {
           {/* دکمه موبایل */}
           <div className="md:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={() => dispatch(toggleMenu())}
               className="text-white hover:text-pink-400 transition-colors duration-300"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -64,18 +62,20 @@ export const Header: React.FC<HeaderProps> = () => {
 
         {/* منوی موبایل */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/10 backdrop-blur-lg shadow-lg py-4 flex flex-col">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md shadow-lg py-6 flex flex-col items-start pl-6 pr-6 rounded-b-lg transition-all duration-300">
             {menuItems.map((item, index) => (
               <a
                 key={index}
                 href={`#${item.id}`}
-                className="block px-6 py-2 text-white hover:bg-white/20 rounded-lg transition-all duration-300"
+                className="block w-full px-4 py-3 text-gray-900 dark:text-white hover:bg-pink-100 dark:hover:bg-pink-700/50 rounded-md transition-all duration-200 text-lg font-medium"
+                onClick={() => dispatch(toggleMenu())}
               >
                 {item.label}
               </a>
             ))}
           </div>
         )}
+
       </nav>
     </header>
   );

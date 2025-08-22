@@ -31,7 +31,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="font-bold">ایمیل</div>
-                  <div className="text-gray-300">ali@artgallery.ir</div>
+                  <div className="text-gray-300">egeemobin@gmail.com</div>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -40,7 +40,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="font-bold">تلفن</div>
-                  <div className="text-gray-300">0912-345-6789</div>
+                  <div className="text-gray-300">09939672033</div>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -49,7 +49,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="font-bold">آدرس</div>
-                  <div className="text-gray-300">تهران، خیابان ولیعصر</div>
+                  <div className="text-gray-300">تهران، ارم</div>
                 </div>
               </div>
             </div>
