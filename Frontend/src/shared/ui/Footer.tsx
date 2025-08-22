@@ -37,9 +37,9 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4">تماس</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>ali@artgallery.ir</li>
-              <li>0912-345-6789</li>
-              <li>تهران، ولیعصر</li>
+              <li>aegeemobin@gmail.com</li>
+              <li>0993-967-2033</li>
+              <li>تهران، ارم</li>
             </ul>
           </div>
         </div>
