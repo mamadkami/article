@@ -11,8 +11,8 @@ Frontend/npm-debug.log*
 Backend/npm-debug.log*
 
 # Env files
-# Frontend/.env
-# Backend/.env
+Frontend/.env
+Backend/.env
 
 # OS files
 .DS_Store
