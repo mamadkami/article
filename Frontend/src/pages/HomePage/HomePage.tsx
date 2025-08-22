@@ -24,6 +24,7 @@ import {
   useGetServicesQuery,
   useGetPortfolioItemsQuery
 } from "../../shared/api/portfolioApi";
+import { Loading } from "../../shared/ui/Loading";
 
 export const HomePage: React.FC = () => {
   const dispatch = useDispatch();
@@ -78,7 +79,7 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="font-sans bg-gray-50 text-gray-800 rtl overflow-x-hidden antialiased">
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loading />}
       {isError && <p>Error loading data</p>}
 
       {!isLoading && !isError && (
